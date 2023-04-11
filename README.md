@@ -1,3 +1,6 @@
+Deprecated method were fixed by https://github.com/wang-jiahua/slide-extractor
+I added multithreading.
+
 # slide-extractor
 
 A script that extracts slides from lecture video and converts them into a searchable OCRed PDF.
