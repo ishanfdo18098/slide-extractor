@@ -109,7 +109,7 @@ def create_pdf():
     )  # save file where video file is
     tqdm.write("Temporary files removed\n")
     subprocess.call(
-        ["bash", "-c", "rm -f frame*.png frame*.pdf combine-*.pdf split*.pdf"]
+        ["bash", "-c", "rm -f frame*.png frame*.pdf combine-*.pdf split*.mp4"]
     )
 
 
