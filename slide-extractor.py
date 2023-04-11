@@ -108,9 +108,9 @@ def create_pdf():
         "combine-text.pdf", "combine-img.pdf", filename + ".pdf"
     )  # save file where video file is
     tqdm.write("Temporary files removed\n")
-    # subprocess.call(
-    #     ["bash", "-c", "rm -f frame*.png frame*.pdf combine-*.pdf split*.mp4"]
-    # )
+    subprocess.call(
+        ["bash", "-c", "rm -f frame*.png frame*.pdf combine-*.pdf split*.mp4"]
+    )
 
 
 # Function Author: https://github.com/gsauthof
