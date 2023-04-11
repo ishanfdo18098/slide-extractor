@@ -1,5 +1,10 @@
 Deprecated method were fixed by https://github.com/wang-jiahua/slide-extractor
+
 I added multithreading.
+
+To run this. Copy the video to the same folder as the python script. Rename it as input.mp4. Then `python3 slide-extractor.py`
+
+
 
 # slide-extractor
 
