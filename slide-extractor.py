@@ -44,7 +44,7 @@ def convert_video_to_images(filename, idx):
     originalIdx = idx
     basename = os.path.basename(filename)
     purename = os.path.splitext(basename)[0]
-    # tqdm.write("Extracting key frames from " + basename + ", may take a minute...")
+    tqdm.write("Extracting key frames from " + basename + ", may take a minute...")
 
     cap = cv2.VideoCapture(filename)
     success, cv2_im = cap.read()
@@ -147,7 +147,7 @@ if __name__ == "__main__":
     startingIndex = 0
     with ThreadPoolExecutor(max_workers=NUM_OF_THREADS) as exe:
         for eachFile in splitted_files:
-            print(f"Extracting frames from {eachFile} started !")
+            # print(f"Extracting frames from {eachFile} started !")
             exe.submit(convert_video_to_images, eachFile, startingIndex)
             startingIndex += 1000
 
