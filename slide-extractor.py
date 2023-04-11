@@ -86,7 +86,7 @@ def create_pdf():
         [
             "bash",
             "-c",
-            "for i in split*.png; do tesseract -c textonly_pdf=1 $i $i pdf; done;",
+            "for i in frame*.png; do tesseract -c textonly_pdf=1 $i $i pdf; done;",
         ],
         stdout=FNULL,
         stderr=subprocess.STDOUT,
@@ -108,9 +108,9 @@ def create_pdf():
         "combine-text.pdf", "combine-img.pdf", filename + ".pdf"
     )  # save file where video file is
     tqdm.write("Temporary files removed\n")
-    subprocess.call(
-        ["bash", "-c", "rm -f frame*.png frame*.pdf combine-*.pdf split*.mp4"]
-    )
+    # subprocess.call(
+    #     ["bash", "-c", "rm -f frame*.png frame*.pdf combine-*.pdf split*.mp4"]
+    # )
 
 
 # Function Author: https://github.com/gsauthof
